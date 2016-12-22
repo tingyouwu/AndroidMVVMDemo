@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.wty.app.mvvmdemo.databinding.ActivityDatabindingBinding;
 import com.wty.app.mvvmdemo.model.User;
+import com.wty.app.mvvmdemo.observable.ObservableUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         ActivityDatabindingBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_databinding);
-        User user = new User("wu","tingyou");
+        ObservableUser user = new ObservableUser("wu","tingyou");
         binding.setUser(user);
+        user.setFirstName("li");
     }
 }
