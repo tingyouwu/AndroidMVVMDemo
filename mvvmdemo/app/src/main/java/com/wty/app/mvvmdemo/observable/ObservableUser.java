@@ -2,6 +2,9 @@ package com.wty.app.mvvmdemo.observable;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
+import android.databinding.BindingAdapter;
+import android.util.Log;
+import android.view.View;
 
 import com.wty.app.mvvmdemo.BR;
 
@@ -24,6 +27,11 @@ public class ObservableUser extends BaseObservable{
     public void setFirstName(String firstName) {
         this.firstName = firstName;
         notifyPropertyChanged(BR.firstName);
+    }
+
+    @BindingAdapter({"myname"})
+    public static void onRefreshName(View view,String firstName){
+        Log.d("wty","onrefreshName call" + firstName);
     }
 
     @Bindable

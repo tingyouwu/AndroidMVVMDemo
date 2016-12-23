@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
@@ -23,6 +24,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{user.firstName}" />
+
+        <TextView
+            android:id="@+id/tv_content3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            bind:myname="@{user.firstName}" />
 
     </LinearLayout>
 
