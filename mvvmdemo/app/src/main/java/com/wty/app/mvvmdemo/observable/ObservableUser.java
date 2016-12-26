@@ -7,8 +7,9 @@ import android.util.Log;
 import android.view.View;
 
 import com.wty.app.mvvmdemo.BR;
+import com.wty.app.mvvmlib.viewmodel.IViewModel;
 
-public class ObservableUser extends BaseObservable{
+public class ObservableUser extends BaseObservable implements IViewModel{
     private String firstName;
     private String lastName;
     private String displayName;
